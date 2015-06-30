@@ -13,20 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin.config;
+package org.zalando.stups.fullstop.plugin.region.config;
 
 import com.amazonaws.services.cloudtrail.processinglibrary.exceptions.CallbackException;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEvent;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEventData;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.internal.CloudTrailEventField;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.internal.UserIdentity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.zalando.stups.fullstop.events.Records;
 import org.zalando.stups.fullstop.events.TestCloudTrailEventData;
 import org.zalando.stups.fullstop.plugin.LocalPluginProcessor;
-import org.zalando.stups.fullstop.plugin.RegionPlugin;
+import org.zalando.stups.fullstop.plugin.region.RegionPlugin;
+import org.zalando.stups.fullstop.plugin.region.config.RegionPluginProperties;
 import org.zalando.stups.fullstop.violation.SystemOutViolationSink;
 import org.zalando.stups.fullstop.violation.Violation;
 import org.zalando.stups.fullstop.violation.ViolationSink;

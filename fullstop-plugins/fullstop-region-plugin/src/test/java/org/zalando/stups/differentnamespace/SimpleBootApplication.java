@@ -19,9 +19,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.zalando.stups.fullstop.plugin.config.RegionPluginProperties;
+import org.zalando.stups.fullstop.plugin.region.config.RegionPluginProperties;
 
 import javax.annotation.PostConstruct;
+
 import java.util.List;
 
 /**

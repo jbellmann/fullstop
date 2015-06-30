@@ -13,25 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin.config;
+package org.zalando.stups.fullstop.plugin.region.config;
 
-import org.zalando.stups.fullstop.events.TestCloudTrailEventData;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.zalando.stups.fullstop.plugin.region.RegionPlugin;
 
 /**
  * @author jbellmann
  */
-public class RegionPluginTestCloudTrailEventData extends TestCloudTrailEventData {
-
-    private String region;
-
-    public RegionPluginTestCloudTrailEventData(final String classpathResource, final String region) {
-        super(classpathResource);
-        this.region = region;
-    }
-
-    @Override
-    public String getAwsRegion() {
-        return region;
-    }
-
+@Configuration
+@ComponentScan(basePackageClasses = { RegionPlugin.class })
+@EnableConfigurationProperties({ RegionPluginProperties.class })
+public class RegionPluginAutoConfiguration {
 }

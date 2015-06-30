@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin;
+package org.zalando.stups.fullstop.plugin.region;
 
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEvent;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.zalando.stups.fullstop.events.CloudTrailEventPredicate;
-import org.zalando.stups.fullstop.plugin.config.RegionPluginProperties;
+import org.zalando.stups.fullstop.plugin.AbstractFullstopPlugin;
+import org.zalando.stups.fullstop.plugin.region.config.RegionPluginProperties;
 import org.zalando.stups.fullstop.violation.ViolationBuilder;
 import org.zalando.stups.fullstop.violation.ViolationSink;
 

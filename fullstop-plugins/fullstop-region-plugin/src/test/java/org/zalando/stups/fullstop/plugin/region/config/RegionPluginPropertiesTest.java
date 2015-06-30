@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin.config;
+package org.zalando.stups.fullstop.plugin.region.config;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
+import org.zalando.stups.fullstop.plugin.region.config.RegionPluginProperties;
 
 /**
  * @author jbellmann

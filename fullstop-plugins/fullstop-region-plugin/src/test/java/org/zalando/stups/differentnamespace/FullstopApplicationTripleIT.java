@@ -19,6 +19,7 @@ import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEvent
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEventData;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.internal.CloudTrailEventField;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.internal.UserIdentity;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,9 +30,9 @@ import org.springframework.plugin.core.PluginRegistry;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zalando.stups.fullstop.plugin.FullstopPlugin;
-import org.zalando.stups.fullstop.plugin.RegionPlugin;
-import org.zalando.stups.fullstop.plugin.config.RegionPluginProperties;
-import org.zalando.stups.fullstop.plugin.config.RegionPluginTestCloudTrailEventData;
+import org.zalando.stups.fullstop.plugin.region.RegionPlugin;
+import org.zalando.stups.fullstop.plugin.region.config.RegionPluginProperties;
+import org.zalando.stups.fullstop.plugin.region.config.RegionPluginTestCloudTrailEventData;
 
 import java.util.List;
 
