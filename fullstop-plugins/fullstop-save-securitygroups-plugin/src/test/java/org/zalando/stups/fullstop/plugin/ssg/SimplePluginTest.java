@@ -13,14 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin;
+package org.zalando.stups.fullstop.plugin.ssg;
 
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEvent;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.zalando.stups.fullstop.events.Records;
 import org.zalando.stups.fullstop.events.TestCloudTrailEventData;
+import org.zalando.stups.fullstop.plugin.ssg.SaveSecurityGroupsPlugin;
+import org.zalando.stups.fullstop.plugin.ssg.SecurityGroupProvider;
 import org.zalando.stups.fullstop.s3.S3Service;
 
 import java.util.List;

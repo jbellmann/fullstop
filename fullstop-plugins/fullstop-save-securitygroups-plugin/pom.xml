@@ -60,6 +60,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>fullstop-plugin-test</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>fullstop-test-support</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
@@ -114,6 +120,10 @@
                 <includes>
                     <include>META-INF/fullstop/*.*</include>
                 </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
             </resource>
         </resources>
         <plugins>

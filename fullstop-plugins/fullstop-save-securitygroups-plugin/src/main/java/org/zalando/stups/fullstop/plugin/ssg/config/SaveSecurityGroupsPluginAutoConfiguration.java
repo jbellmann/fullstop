@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin.config;
+package org.zalando.stups.fullstop.plugin.ssg.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -21,8 +21,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.zalando.stups.fullstop.aws.ClientProvider;
-import org.zalando.stups.fullstop.plugin.SaveSecurityGroupsPlugin;
-import org.zalando.stups.fullstop.plugin.SecurityGroupProvider;
+import org.zalando.stups.fullstop.plugin.ssg.SaveSecurityGroupsPlugin;
+import org.zalando.stups.fullstop.plugin.ssg.SecurityGroupProvider;
 
 /**
  * @author jbellmann
