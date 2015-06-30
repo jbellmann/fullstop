@@ -13,27 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin;
+package org.zalando.stups.fullstop.plugin.registry;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEvent;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEventData;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
-import org.zalando.stups.clients.kio.Application;
-import org.zalando.stups.clients.kio.Approval;
-import org.zalando.stups.clients.kio.KioOperations;
-import org.zalando.stups.clients.kio.NotFoundException;
-import org.zalando.stups.clients.kio.Version;
 import org.zalando.stups.clients.kio.*;
 import org.zalando.stups.fullstop.clients.pierone.PieroneOperations;
 import org.zalando.stups.fullstop.events.UserDataProvider;
-import org.zalando.stups.fullstop.plugin.config.RegistryPluginProperties;
+import org.zalando.stups.fullstop.plugin.AbstractFullstopPlugin;
+import org.zalando.stups.fullstop.plugin.registry.config.RegistryPluginProperties;
 import org.zalando.stups.fullstop.violation.ViolationBuilder;
 import org.zalando.stups.fullstop.violation.ViolationSink;
 

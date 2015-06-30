@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zalando.stups.fullstop.plugin.config;
+package org.zalando.stups.fullstop.plugin.registry.config;
 
 import com.google.common.collect.Lists;
 import org.springframework.boot.context.properties.ConfigurationProperties;
