@@ -87,7 +87,8 @@ public class PolicyProvider {
         }
     }
 
-    private Policy toPolicy(String assumeRolePolicyDocument) {
+    public Policy toPolicy(String assumeRolePolicyDocument) {
+        // create only once?
             JsonPolicyReader jsonPolicyReader = new JsonPolicyReader();
             return jsonPolicyReader.createPolicyFromJsonString(
                     assumeRolePolicyDocument);

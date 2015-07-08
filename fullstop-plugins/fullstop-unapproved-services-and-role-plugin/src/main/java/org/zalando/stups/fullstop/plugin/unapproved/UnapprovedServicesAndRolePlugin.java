@@ -15,6 +15,9 @@
  */
 package org.zalando.stups.fullstop.plugin.unapproved;
 
+import com.amazonaws.auth.policy.Action;
+import com.amazonaws.auth.policy.Policy;
+import com.amazonaws.auth.policy.Statement;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEvent;
 import com.amazonaws.services.cloudtrail.processinglibrary.model.CloudTrailEventData;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -106,6 +109,18 @@ public class UnapprovedServicesAndRolePlugin extends AbstractFullstopPlugin {
                                                                             .build());
 
         }
+
+        Policy policyObj = policyProvider.toPolicy(policy);
+
+        for (Statement statement : policyObj.getStatements()) {
+            if (statement.getEffect() == Statement.Effect.Allow) {
+                for (Action action : statement.getActions()) {
+                    action.getActionName().startsWith("ec2");
+                }
+
+            }
+        }
+
     }
 
     private String getRoleName(CloudTrailEvent event) {
