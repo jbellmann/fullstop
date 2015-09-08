@@ -2,5 +2,3 @@
 -Region-Plugin, same
 -Instance-Plugin
 -Can Spring parse a list from application.yaml?
-
-trigger build again and again and again
